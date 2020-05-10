@@ -1,7 +1,7 @@
 {
-    "name": "react-pagination",
+    "name": "react-bootstrap-pagination",
     "version": "0.0.1",
-    "description": "Easy react pagination component",
+    "description": "A React component to render and manage Bootstrap 4 pagination quickly and easily",
     "main": "build/index.js",
     "peerDependencies": {
         "react": "^15.5.4"
@@ -13,7 +13,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "webpack --watch",
-        "build": "webpack"
+        "build": "webpack",
+        "prepublishOnly": "npm run build"
     },
     "keywords": [
         "react",
@@ -33,6 +34,7 @@
         "name": "Marc Torrents",
         "email": "hola@marctorrents.com"
     },
+    "license": "MIT",
     "devDependencies": {
         "babel-cli": "^6.24.1",
         "babel-core": "^6.24.1",
