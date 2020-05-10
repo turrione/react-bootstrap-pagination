@@ -1,6 +1,6 @@
 [![NPM](https://nodei.co/npm/react-bootstrap-4-pagination.png?downloads=true)](https://nodei.co/npm/react-bootstrap-4-pagination/)
 
-# react-bootstrap-pagination
+# react-bootstrap-4-pagination
 
 **A React component to render and manage Bootstrap 4 pagination quickly and easily.**
 
@@ -13,7 +13,7 @@ Check [Live example](https://codesandbox.io/s/react-bootstrap-4-pagination-12efe
 Install `react-bootstrap-4-pagination` with [npm](https://www.npmjs.com/):
 
 ```
-$ npm install react-bootstrap-pagination
+$ npm install react-bootstrap-4-pagination
 ```
 
 ## Usage
