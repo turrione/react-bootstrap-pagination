@@ -1,12 +1,16 @@
+[![NPM](https://nodei.co/npm/react-bootstrap-4-pagination.png?downloads=true)](https://nodei.co/npm/react-bootstrap-4-pagination/)
+
 # react-bootstrap-pagination
 
 **A React component to render and manage Bootstrap 4 pagination quickly and easily.**
 
 Your project must have [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) in order to properly render the component
 
+Check [Live example](https://codesandbox.io/s/react-bootstrap-4-pagination-12efe)
+
 ## Installation
 
-Install `react-bootstrap-pagination` with [npm](https://www.npmjs.com/):
+Install `react-bootstrap-4-pagination` with [npm](https://www.npmjs.com/):
 
 ```
 $ npm install react-bootstrap-pagination
@@ -35,7 +39,7 @@ let paginationConfig = {
 
 function App() {
   return (
-    <div className="App text-center">
+    <div className="App">
       <Pagination {...paginationConfig} />
     </div>
   );
@@ -65,7 +69,7 @@ let paginationConfig = {
 
 function App() {
   return (
-    <div className="App text-center">
+    <div className="App">
       <Pagination {...paginationConfig} />
     </div>
   );
