@@ -24,7 +24,6 @@ export default class Pagination extends React.Component {
             center
         } = this.props;
         const pagination = getPagination(this.props);
-        console.log(this.props);
         return (
             <nav
                 aria-label={ariaLabel}
