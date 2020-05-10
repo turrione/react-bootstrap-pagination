@@ -1,5 +1,5 @@
 {
-    "name": "react-bootstrap-pagination",
+    "name": "react-bootstrap-4-pagination",
     "version": "0.0.1",
     "description": "A React component to render and manage Bootstrap 4 pagination quickly and easily",
     "main": "build/index.js",
