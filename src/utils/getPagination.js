@@ -34,7 +34,7 @@ const isCurrent = (page, currentPage) => currentPage === page;
 
 const addThreeDots = (arr, props) => {
     let threeDotsObj = { page: false, text: '...', isCurrent: false, class: props.disabledClass };
-    arr[0].page !== 1 && arr.unshift(threeDotsObj) && arr.unshift({ page: 1, text: 1, isCurrent: false, class: props.defaultClass, href: props.href && props.href.replace('*', 1) });
+    arr[0].page !== 1 && arr.unshift(threeDotsObj) && arr.unshift({ page: 1, text: 1, isCurrent: false, class: props.defaultClass, href: props.pageOneHref ? props.pageOneHref : props.href && props.href.replace('*', 1) });
     arr[arr.length - 1].page !== props.totalPages && arr.push(threeDotsObj) && arr.push({ page: props.totalPages, text: props.totalPages, isCurrent: false, class: props.defaultClass, href: props.href && props.href.replace('*', props.totalPages) });
     return arr;
 }
