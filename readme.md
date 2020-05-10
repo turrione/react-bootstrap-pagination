@@ -27,14 +27,23 @@ import React from 'react';
 import Pagination from 'react-pagination';
 
 let paginationConfig = {
-  totalPages: 7,
-  currentPage: 3,
+  totalPages: 22,
+  currentPage: 15,
   showMax: 5,
   size: "lg",
   threeDots: true,
   prevNext: true,
   href: 'https://example.com/items?page=*', // * will be replaced by the page number
-  pageOneHref: 'https://example.com/items'
+  pageOneHref: 'https://example.com/items',
+  borderColor: 'red',
+  activeBorderColor: 'black',
+  activeBgColor: 'grey',
+  disabledBgColor: 'red',
+  activeColor: 'red',
+  color: 'purple',
+  disabledColor: 'green',
+  circle: true,
+  shadow: true
 };
 
 function App() {
