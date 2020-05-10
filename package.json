@@ -34,6 +34,10 @@
         "name": "Marc Torrents",
         "email": "hola@marctorrents.com"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/turrione/react-bootstrap-pagination.git"
+    },
     "license": "MIT",
     "devDependencies": {
         "babel-cli": "^6.24.1",
