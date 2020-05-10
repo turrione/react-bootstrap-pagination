@@ -17,7 +17,8 @@ const PageItem = ({
     disabledColor,
     color,
     circle,
-    shadow
+    shadow,
+    size
 }) => (
         <li className={`page-item ${className !== undefined && className !== false ? className : ''}`} >
             <a
@@ -33,7 +34,7 @@ const PageItem = ({
                         color,
                         disabledColor
                     }, className),
-                    ...circleStyle(circle),
+                    ...circleStyle(circle, size),
                     ...shadowStyle(shadow, circle)
 
                 }}
@@ -45,15 +46,38 @@ const PageItem = ({
         </li >
     );
 
-const circleStyle = (isCircle) => {
+const circleStyle = (isCircle, size) => {
     if (!isCircle) return {}
-    return {
-        borderRadius: '30px',
-        marginLeft: '6px',
-        marginRight: '6px',
-        width: '57px',
-        height: '57px',
-        padding: '.75rem 17px'
+    if (size === 'lg' || size === 'sm') {
+        if (size === 'lg') {
+            return {
+                borderRadius: '30px',
+                marginLeft: '6px',
+                marginRight: '6px',
+                width: '57px',
+                height: '57px',
+                padding: '.75rem 17px'
+            }
+        }
+        if (size === 'sm') {
+            return {
+                borderRadius: '30px',
+                marginLeft: '4px',
+                marginRight: '4px',
+                width: '36px',
+                height: '36px',
+                padding: '7px'
+            }
+        }
+    } else {
+        return {
+            borderRadius: '30px',
+            marginLeft: '6px',
+            marginRight: '6px',
+            width: '45px',
+            height: '45px',
+            padding: '11px'
+        }
     }
 }
 

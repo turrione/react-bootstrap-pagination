@@ -51,7 +51,8 @@ export default class Pagination extends React.Component {
                                 color={color}
                                 disabledColor={disabledColor}
                                 circle={circle}
-                                shadow={shadow} />
+                                shadow={shadow}
+                                size={size} />
                         )
                     }
                 </ul>
