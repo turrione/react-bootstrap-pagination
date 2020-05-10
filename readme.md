@@ -120,3 +120,6 @@ Name | Type | Default | Description
 `circle` | Boolean | `false` | Set to true if you want circular page items
 `shadow` | Boolean | `false` | Set to true if you want shadow on page items
 `ariaLabel` | String | `Page navigator` | `aria-label` text of nav element
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
