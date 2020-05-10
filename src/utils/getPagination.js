@@ -18,9 +18,6 @@ const getPagination = (props) => {
         });
     }
 
-    let lastPage = arr[arr.length - 1].page;
-    let firstPage = arr[0].page;
-
     if (props.threeDots) {
         arr = addThreeDots(arr, props);
     }
