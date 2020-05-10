@@ -21,13 +21,14 @@ export default class Pagination extends React.Component {
             disabledColor,
             circle,
             shadow,
-            center
+            center,
+            className
         } = this.props;
         const pagination = getPagination(this.props);
         return (
             <nav
                 aria-label={ariaLabel}
-                className={`row ${center && 'justify-content-center'}`}>
+                className={`row ${center && 'justify-content-center'} ${className && className}`}>
                 <ul
                     style={shadowStyle(shadow, circle)}
                     className={`pagination ${(size === 'sm' || size === 'lg') && 'pagination-' + size}`}>
@@ -88,7 +89,8 @@ Pagination.propTypes = {
     disabledColor: React.PropTypes.string,
     color: React.PropTypes.string,
     circle: React.PropTypes.bool,
-    shadow: React.PropTypes.bool
+    shadow: React.PropTypes.bool,
+    className: React.PropTypes.string
 };
 
 Pagination.defaultProps = {
