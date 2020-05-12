@@ -24,7 +24,7 @@ Very easy to use. Just provide props with total amount of things that you want t
 
 ```js
 import React from 'react';
-import Pagination from 'react-pagination';
+import Pagination from 'react-bootstrap-4-pagination';
 
 let paginationConfig = {
   totalPages: 22,
