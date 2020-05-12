@@ -1,12 +1,6 @@
 const getStyles = (styles, className) => {
     switch (className) {
-        case undefined:
-            return {
-                color: styles.color && styles.color,
-                backgroundColor: styles.bgColor,
-                borderColor: styles.borderColor
-            }
-        case false:
+        case undefined || false:
             return {
                 color: styles.color && styles.color,
                 backgroundColor: styles.bgColor,
