@@ -62,7 +62,7 @@ export default App;
 
 ```js
 import React from 'react';
-import Pagination from 'react-pagination';
+import Pagination from 'react-bootstrap-4-pagination';
 
 let paginationConfig = {
   totalPages: 7,
