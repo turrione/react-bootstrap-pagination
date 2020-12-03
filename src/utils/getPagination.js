@@ -9,9 +9,9 @@ const getPagination = (props) => {
     let max = props.showMax > props.totalPages ? props.totalPages : props.showMax;
 
     for (let i = 0; i < max; i++) {
-        if(startAt +  > props.totalPages) continue;
+        if(startAt + i > props.totalPages) continue;
         arr.push({
-            page: startAt + i,i
+            page: startAt + i,
             text: startAt + i,
             isCurrent: isCurrent(startAt + i, props.currentPage),
             class: isCurrent(startAt + i, props.currentPage) ? props.activeClass : props.defaultClass,
