@@ -100,8 +100,11 @@ Name | Type | Default | Description
 `onClick` | Function | | Page item click handler. Receive pageNumber as arg. If you pass onClick prop, href prop will stop having effect
 `size` | String | `md` | Pagination component size. Options: `sm` `lg`
 `prevNext` | Boolean | `true` | Set to `false` if you don't want to show next and prev navigation buttons
+`firstLast` | Boolean | `false` | Set to `true` if you want to show first and last navigation buttons
 `prevText` | String | `⟨` | Text of prev page navigation button
 `nextText` | String | `⟩` | Text of prev page navigation button
+`firstText` | String | `⟨⟨` | Text of first page navigation button
+`lastText` | String | `⟩⟩` | Text of last page navigation button
 `href` | String | | Href template. Example: `https://example.com/items?page=*&sessionId=Khf3124nfj` * will be replaced by the page item number
 `pageOneHref` | String | | Href template for first page. Example: `https://example.com/items?sessionId=Khf3124nfj` if pageOneHref is not set, page one links will have the href template
 `threeDots` | Boolean | `false` | Set to `true`if you want to show Ellipsis items
