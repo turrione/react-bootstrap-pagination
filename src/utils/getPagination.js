@@ -9,15 +9,15 @@ const getPagination = (props) => {
     let max = props.showMax > props.totalPages ? props.totalPages : props.showMax;
 
     for (let i = 0; i < max; i++) {
-        if (!(startAt + i > props.totalPages)) {
-            arr.push({
-                page: startAt + i,
-                text: startAt + i,
-                isCurrent: isCurrent(startAt + i, props.currentPage),
-                class: isCurrent(startAt + i, props.currentPage) ? props.activeClass : props.defaultClass,
-                href: startAt + i === 1 ? props.href && props.pageOneHref : props.href && props.href.replace('*', startAt + i)
-            });
-        }
+
+        if(startAt + i > props.totalPages) continue;
+        arr.push({
+            page: startAt + i,
+            text: startAt + i,
+            isCurrent: isCurrent(startAt + i, props.currentPage),
+            class: isCurrent(startAt + i, props.currentPage) ? props.activeClass : props.defaultClass,
+            href: startAt + i === 1 ? props.href && props.pageOneHref : props.href && props.href.replace('*', startAt + i)
+        });
     }
 
     if (props.threeDots) {
