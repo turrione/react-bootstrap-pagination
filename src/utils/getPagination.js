@@ -43,7 +43,7 @@ const addThreeDots = (arr, props) => {
 
 const addNext = (arr, props) => {
     let nextObj = {
-        page: props.currentPage + 1,
+        page: props.currentPage + 1 > props.totalPages ? props.currentPage:props.currentPage + 1,
         text: props.nextText,
         isCurrent: false,
         class: props.currentPage + 1 > props.totalPages && props.disabledClass,
