@@ -29,6 +29,11 @@ const getPagination = (props) => {
         arr = addPrev(arr, props);
     }
 
+    if (props.firstLast) {
+        arr = addFirst(arr, props);
+        arr = addLast(arr, props);
+    }
+
     return arr;
 }
 
@@ -62,6 +67,30 @@ const addPrev = (arr, props) => {
         href: props.href && props.href.replace('*', props.currentPage - 1)
     };
     arr.unshift(prevObj);
+    return arr;
+}
+
+const addLast = (arr, props) => {
+    let nextObj = {
+        page: props.totalPages,
+        text: props.lastText,
+        isCurrent: false,
+        class: props.currentPage + 1 > props.totalPages && props.disabledClass,
+        href: props.href && props.href.replace('*', props.totalPages)
+    };
+    arr.push(nextObj);
+    return arr;
+}
+
+const addFirst = (arr, props) => {
+    let firstObj = {
+        page: 1,
+        text: props.firstText,
+        isCurrent: false,
+        class: props.currentPage - 1 < 1 && props.disabledClass,
+        href: props.href && props.href.replace('*', 1)
+    };
+    arr.unshift(firstObj);
     return arr;
 }
 
