@@ -1,6 +1,16 @@
 import React from 'react';
 import getStyles from './utils/getStyles';
 
+const PageElement = ({onClick, href, page, style, className, children}) => {
+    return onClick ?
+    <button className={["btn", className].join(" ")} onClick={() => onClick(page)} style={style}>
+        {children}
+    </button>
+    : <a href={href} className={className} style={style}>
+        {children}
+    </a>
+}
+
 const PageItem = ({
     text,
     page,
@@ -19,32 +29,29 @@ const PageItem = ({
     circle,
     shadow,
     size
-}) => (
-        <li className={`page-item ${className !== undefined && className !== false ? className : ''}`} >
-            <a
-                style={{
-                    ...getStyles({
-                        activeBgColor,
-                        activeBorderColor,
-                        disabledBgColor,
-                        disabledBorderColor,
-                        bgColor,
-                        borderColor,
-                        activeColor,
-                        color,
-                        disabledColor
-                    }, className),
-                    ...circleStyle(circle, size),
-                    ...shadowStyle(shadow, circle)
+}) => {
+    const style = {
+        ...getStyles({
+            activeBgColor,
+            activeBorderColor,
+            disabledBgColor,
+            disabledBorderColor,
+            bgColor,
+            borderColor,
+            activeColor,
+            color,
+            disabledColor
+        }, className),
+        ...circleStyle(circle, size),
+        ...shadowStyle(shadow, circle)
+    };
 
-                }}
-                className={'page-link'}
-                onClick={() => onClick && onClick(page)}
-                {...onClick ? { href: '#' } : { href: href }} >
-                {text}
-            </a>
-        </li >
-    );
+    return <li className={`page-item ${className !== undefined && className !== false ? className : ''}`} >
+        <PageElement style={style} className={'page-link'} onClick={onClick} href={href} page={page}>
+            {text}
+        </PageElement>
+    </li >
+}
 
 const circleStyle = (isCircle, size) => {
     if (!isCircle) return {}
